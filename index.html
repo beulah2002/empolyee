@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee From</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Employee Details</h2>
+        <form>
+            <table>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Field Name</th>
+                    <th>Field Type</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Employee ID</td>
+                    <td><input type="text" id="employeeid" readonly value=" EGS-xxxx"</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                   <td>First Name</td> 
+                   <td><input type="text" id="firstName"  maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                   <td>LastName</td> 
+                   <td><input type="text" id="lastName"  maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                   <td>Location</td> 
+                   <td><input type="text" id="location"  maxlength="30" placeholder="Chennai, Madurai, Trichy"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                   <td>Salary(per Month)</td> 
+                   <td><input type="number" id="salary"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                   <td>Shift</td> 
+                   <td>
+                    <select id="shift">
+                        <option value="General">General</option>
+                        <option value="1st Shift">1st Shift</option>
+                        <option value="2nd Shift">2nd Shift</option>
+                        <option value="3rd Shift">3rd Shift</option>
+                    </select>
+                   </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Meal Option</td>
+                    <td>
+                        <select id="mealOption" onchange="handleMealOption()">
+                            <option value="Home Lunch">Home Lunch</option>
+                            <option value="Office Lunch">Office Lunch</option>
+                        </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Meal Type</td>
+                    <td>
+                        <select id="mealType">
+                            <option value="Veg">Veg</option>
+                            <option value="Non-Veg">Non-Veg</option>
+                            <option value="Not Applicable">Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Sports</td>
+                    <td>
+                        <select id="sports">
+                            <option value="Caram">Caram</option>
+                            <option value="Badminton">Badminton</option>
+                            <option value="Cricket">Cricket</option>
+                            <option value="Swimming">Swimming</option>
+                            <option value="Not Interested">Not Interested</option>
+                            
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>JOB Title</td>
+                    <td>
+                        <select id="jobTitle">
+                            <option value="GET">GET</option>
+                            <option value="Sr Engineer ">Sr Engineer</option>
+                            <option value="Jr Engineer">Jr Engineer</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Sr Manager">Sr Manager</option>
+                             
+                        </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Reporting To</td>
+                    <td>
+                        <select id="reportingTo">
+                            <option value="Sr Manager">Sr Manager</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Sr Engineer ">Sr Engineer</option>
+                            <option value="Jr Engineer">Jr Engineer</option>
+                            <option value="GET">GET</option>
+                             
+                        </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Date Of Birth (DOB)</td>
+                     <td><input type="date" id="dob" onchange="calculateAge()"></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Age</td>
+                    <td><input type="number" id="age" readonly</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Date Of Joining</td>
+                    <td><input type="date" id="doj" value="2024-10-21" readonly></td>
+                </tr>
+            </table>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
